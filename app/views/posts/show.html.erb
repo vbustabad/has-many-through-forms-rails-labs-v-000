@@ -29,7 +29,7 @@ Add a New Comment:
 
   <%= f.collection_select :user_id, User.all, :id, :username, :include_blank => 'Please Select' %>
 
-  <%= f.fields_for :users, @post.comments.last.build_user do |users_fields| %>
+  <%= f.fields_for :user_attributes do |users_fields| %>
     <%= users_fields.text_field :username %>
   <% end %><br />
 
