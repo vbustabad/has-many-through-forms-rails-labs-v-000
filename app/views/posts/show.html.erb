@@ -6,7 +6,7 @@ Comments:
 
 <div>
   <% @post.comments.each do |comment| %>
-    <%= comment.content %>
+    <%= "#{comment.user.username}" says: "#{comment.content}" %>
   <% end %>
 </div>
 
