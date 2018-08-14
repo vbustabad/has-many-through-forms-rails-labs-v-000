@@ -8,6 +8,7 @@ Comments:
   <% @post.comments.each do |comment| %>
     <% comment.user.each do |user| %>
       <%= "#{user.username}" says: "#{comment.content}" %>
+    <% end %>
   <% end %>
 </div>
 
