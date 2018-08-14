@@ -5,7 +5,7 @@
 Comments:
 
 <div>
-  <%= @post.comments.each do |comment| %>
+  <% @post.comments.each do |comment| %>
     <%= comment.content %>
   <% end %>
 </div>
@@ -32,6 +32,9 @@ Add a New Comment:
   <%= f.fields_for :user_attributes do |users_fields| %>
     <%= users_fields.text_field :username %>
   <% end %><br />
+
+  <% @post.comments   %>
+  <%= "#{@post.comments.last.user.username}" says:  %>
 
   <%= f.submit %>
 
