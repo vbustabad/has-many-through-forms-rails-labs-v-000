@@ -28,6 +28,7 @@ Add a New Comment:
   <%= f.collection_check_boxes :user_id, User.all, :id, :username %>
 
   <%= f.fields_for :users, @post.comments.last.build_user do |users_fields| %>
+    <%= users_fields.label "Username" %>
     <%= users_fields.text_field :username %>
   <% end %><br />
 
