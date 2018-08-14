@@ -18,6 +18,14 @@ Users:
   <% end %>
 </ul>
 
+Categories:
+
+<div>
+  <% @post.categories.each do |category| %>
+    <%= category.name %>
+  <% end %>
+</div>
+
 Add a New Comment:
 
 <%= form_for @post.comments.build do |f| %>
